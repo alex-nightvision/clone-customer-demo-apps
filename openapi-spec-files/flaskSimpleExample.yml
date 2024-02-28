@@ -1,0 +1,875 @@
+components: {}
+info:
+  title: flaskSimpleExample
+  version: "0.1"
+openapi: 3.0.0
+paths:
+  /:
+    get:
+      operationId: root_GET
+      responses:
+        default:
+          description: Default response
+      x-name: root_GET
+      x-source: vulnerable-flask-app.py~~12
+    head:
+      operationId: root_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: root_HEAD
+      x-source: vulnerable-flask-app.py~~12
+    options:
+      operationId: root_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: root_OPTIONS
+      x-source: vulnerable-flask-app.py~~12
+    x-name: root
+  /create_file:
+    get:
+      operationId: create_file_GET
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: text
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: create_file_GET
+      x-source: vulnerable-flask-app.py~~124
+    head:
+      operationId: create_file_HEAD
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: text
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: create_file_HEAD
+      x-source: vulnerable-flask-app.py~~124
+    options:
+      operationId: create_file_OPTIONS
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: text
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: create_file_OPTIONS
+      x-source: vulnerable-flask-app.py~~124
+    x-name: create_file
+  /deserialization/:
+    get:
+      operationId: deserialization_GET
+      responses:
+        default:
+          description: Default response
+      x-name: deserialization_GET
+      x-source: vulnerable-flask-app.py~~85
+    head:
+      operationId: deserialization_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: deserialization_HEAD
+      x-source: vulnerable-flask-app.py~~85
+    options:
+      operationId: deserialization_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: deserialization_OPTIONS
+      x-source: vulnerable-flask-app.py~~85
+    x-name: deserialization
+  /factorial/{n}:
+    get:
+      operationId: factorial_{n}_GET
+      parameters:
+      - in: path
+        name: "n"
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: factorial_{n}_GET
+      x-source: vulnerable-flask-app.py~~147
+    head:
+      operationId: factorial_{n}_HEAD
+      parameters:
+      - in: path
+        name: "n"
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: factorial_{n}_HEAD
+      x-source: vulnerable-flask-app.py~~147
+    options:
+      operationId: factorial_{n}_OPTIONS
+      parameters:
+      - in: path
+        name: "n"
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: factorial_{n}_OPTIONS
+      x-source: vulnerable-flask-app.py~~147
+    x-name: factorial_{n}
+  /get_admin_mail/{control}:
+    get:
+      operationId: get_admin_mail_{control}_GET
+      parameters:
+      - in: path
+        name: control
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: get_admin_mail_{control}_GET
+      x-source: vulnerable-flask-app.py~~103
+    head:
+      operationId: get_admin_mail_{control}_HEAD
+      parameters:
+      - in: path
+        name: control
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: get_admin_mail_{control}_HEAD
+      x-source: vulnerable-flask-app.py~~103
+    options:
+      operationId: get_admin_mail_{control}_OPTIONS
+      parameters:
+      - in: path
+        name: control
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: get_admin_mail_{control}_OPTIONS
+      x-source: vulnerable-flask-app.py~~103
+    x-name: get_admin_mail_{control}
+  /get_log/:
+    get:
+      operationId: get_log_GET
+      responses:
+        default:
+          description: Default response
+      x-name: get_log_GET
+      x-source: vulnerable-flask-app.py~~64
+    head:
+      operationId: get_log_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: get_log_HEAD
+      x-source: vulnerable-flask-app.py~~64
+    options:
+      operationId: get_log_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: get_log_OPTIONS
+      x-source: vulnerable-flask-app.py~~64
+    x-name: get_log
+  /get_users:
+    get:
+      operationId: get_users_GET
+      parameters:
+      - in: query
+        name: hostname
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: get_users_GET
+      x-source: vulnerable-flask-app.py~~53
+    head:
+      operationId: get_users_HEAD
+      parameters:
+      - in: query
+        name: hostname
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: get_users_HEAD
+      x-source: vulnerable-flask-app.py~~53
+    options:
+      operationId: get_users_OPTIONS
+      parameters:
+      - in: query
+        name: hostname
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: get_users_OPTIONS
+      x-source: vulnerable-flask-app.py~~53
+    x-name: get_users
+  /hello:
+    get:
+      operationId: hello_GET
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: hello_GET
+      x-source: vulnerable-flask-app.py~~39
+    head:
+      operationId: hello_HEAD
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: hello_HEAD
+      x-source: vulnerable-flask-app.py~~39
+    options:
+      operationId: hello_OPTIONS
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: hello_OPTIONS
+      x-source: vulnerable-flask-app.py~~39
+    x-name: hello
+  /login:
+    get:
+      operationId: login_GET
+      parameters:
+      - in: query
+        name: password
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: username
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: login_GET
+      x-source: vulnerable-flask-app.py~~163
+    x-name: login
+  /logs:
+    get:
+      operationId: logs_GET
+      parameters:
+      - in: query
+        name: data
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: logs_GET
+      x-source: vulnerable-flask-app.py~~181
+    head:
+      operationId: logs_HEAD
+      parameters:
+      - in: query
+        name: data
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: logs_HEAD
+      x-source: vulnerable-flask-app.py~~181
+    options:
+      operationId: logs_OPTIONS
+      parameters:
+      - in: query
+        name: data
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: logs_OPTIONS
+      x-source: vulnerable-flask-app.py~~181
+    x-name: logs
+  /read_file:
+    get:
+      operationId: read_file_GET
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: read_file_GET
+      x-source: vulnerable-flask-app.py~~74
+    head:
+      operationId: read_file_HEAD
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: read_file_HEAD
+      x-source: vulnerable-flask-app.py~~74
+    options:
+      operationId: read_file_OPTIONS
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: read_file_OPTIONS
+      x-source: vulnerable-flask-app.py~~74
+    x-name: read_file
+  /route:
+    get:
+      operationId: route_GET
+      parameters:
+      - in: query
+        name: Content-Type
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: route_GET
+      x-source: vulnerable-flask-app.py~~172
+    head:
+      operationId: route_HEAD
+      parameters:
+      - in: query
+        name: Content-Type
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: route_HEAD
+      x-source: vulnerable-flask-app.py~~172
+    options:
+      operationId: route_OPTIONS
+      parameters:
+      - in: query
+        name: Content-Type
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: route_OPTIONS
+      x-source: vulnerable-flask-app.py~~172
+    x-name: route
+  /run_file:
+    get:
+      operationId: run_file_GET
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: run_file_GET
+      x-source: vulnerable-flask-app.py~~114
+    head:
+      operationId: run_file_HEAD
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: run_file_HEAD
+      x-source: vulnerable-flask-app.py~~114
+    options:
+      operationId: run_file_OPTIONS
+      parameters:
+      - in: query
+        name: filename
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: run_file_OPTIONS
+      x-source: vulnerable-flask-app.py~~114
+    x-name: run_file
+  /upload:
+    get:
+      operationId: upload_GET
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                file:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: upload_GET
+      x-source: vulnerable-flask-app.py~~203
+    post:
+      operationId: upload_POST
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                file:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: upload_POST
+      x-source: vulnerable-flask-app.py~~203
+    x-name: upload
+  /user/{name}:
+    get:
+      operationId: user_{name}_GET
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: user_{name}_GET
+      x-source: vulnerable-flask-app.py~~16
+    head:
+      operationId: user_{name}_HEAD
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: user_{name}_HEAD
+      x-source: vulnerable-flask-app.py~~16
+    options:
+      operationId: user_{name}_OPTIONS
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: user_{name}_OPTIONS
+      x-source: vulnerable-flask-app.py~~16
+    x-name: user_{name}
+  /user_pass_control:
+    get:
+      operationId: user_pass_control_GET
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                password:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                username:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: user_pass_control_GET
+      x-source: vulnerable-flask-app.py~~190
+    head:
+      operationId: user_pass_control_HEAD
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                password:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                username:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: user_pass_control_HEAD
+      x-source: vulnerable-flask-app.py~~190
+    options:
+      operationId: user_pass_control_OPTIONS
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                password:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                username:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: user_pass_control_OPTIONS
+      x-source: vulnerable-flask-app.py~~190
+    x-name: user_pass_control
+  /welcome/{name}:
+    get:
+      operationId: welcome_{name}_GET
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: welcome_{name}_GET
+      x-source: vulnerable-flask-app.py~~29
+    head:
+      operationId: welcome_{name}_HEAD
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: welcome_{name}_HEAD
+      x-source: vulnerable-flask-app.py~~29
+    options:
+      operationId: welcome_{name}_OPTIONS
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: welcome_{name}_OPTIONS
+      x-source: vulnerable-flask-app.py~~29
+    x-name: welcome_{name}
+  /welcome2/{name}:
+    get:
+      operationId: welcome2_{name}_GET
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: welcome2_{name}_GET
+      x-source: vulnerable-flask-app.py~~34
+    head:
+      operationId: welcome2_{name}_HEAD
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: welcome2_{name}_HEAD
+      x-source: vulnerable-flask-app.py~~34
+    options:
+      operationId: welcome2_{name}_OPTIONS
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: welcome2_{name}_OPTIONS
+      x-source: vulnerable-flask-app.py~~34
+    x-name: welcome2_{name}
+servers:
+- description: Default server
+  url: http://127.0.0.1:8081/

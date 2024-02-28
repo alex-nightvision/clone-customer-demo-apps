@@ -1,0 +1,158 @@
+components: {}
+info:
+  title: vulndjangoplay
+  version: "0.1"
+openapi: 3.0.0
+paths:
+  /:
+    get:
+      operationId: root_GET
+      responses:
+        default:
+          description: Default response
+      x-name: root_GET
+      x-source: vuln_django/views.py~~12
+    x-name: root
+  /admin/:
+    get:
+      operationId: admin_GET
+      responses:
+        default:
+          description: Default response
+      x-name: admin_GET
+      x-source: vuln_django/urls.py~~25
+    x-name: admin
+  /polls/:
+    get:
+      operationId: polls_GET
+      responses:
+        default:
+          description: Default response
+      x-name: polls_GET
+      x-source: polls/urls.py~~8
+    x-name: polls
+  /polls/{injector_str}/:
+    get:
+      operationId: polls_{injector_str}_GET
+      parameters:
+      - in: path
+        name: injector_str
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: polls_{injector_str}_GET
+      x-source: polls/views.py~~85
+    x-name: polls_{injector_str}
+  /polls/{pk}/:
+    get:
+      operationId: polls_{pk}_GET
+      parameters:
+      - in: path
+        name: pk
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: polls_{pk}_GET
+      x-source: polls/urls.py~~10
+    x-name: polls_{pk}
+  /polls/{pk}/results/:
+    get:
+      operationId: polls_{pk}_results_GET
+      parameters:
+      - in: path
+        name: pk
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: polls_{pk}_results_GET
+      x-source: polls/urls.py~~12
+    x-name: polls_{pk}_results
+  /polls/{question_id}/vote/:
+    get:
+      operationId: polls_{question_id}_vote_GET
+      parameters:
+      - in: query
+        name: choice
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: path
+        name: question_id
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: polls_{question_id}_vote_GET
+      x-source: polls/views.py~~65
+    x-name: polls_{question_id}_vote
+  /polls/search/:
+    get:
+      operationId: polls_search_GET
+      parameters:
+      - in: query
+        name: search_string
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: polls_search_GET
+      x-source: polls/views.py~~107
+    x-name: polls_search
+  /polls/sql/:
+    get:
+      operationId: polls_sql_GET
+      parameters:
+      - in: query
+        name: sql
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: polls_sql_GET
+      x-source: polls/views.py~~93
+    x-name: polls_sql
+servers:
+- description: Default server
+  url: http://localhost:8020

@@ -17,7 +17,9 @@ testasp
 testphp
 public-firing-range
 javaspringvulny-api
-saddlebag-exchange"
+saddlebag-exchange
+webgoatnet
+flaskSimpleExample"
 
 for app in $apps; do
 	nightvision app create --name $app
@@ -32,6 +34,10 @@ nightvision target create -u "http://testphp.vulnweb.com/" -n "testphp"
 nightvision target create -u "https://public-firing-range.appspot.com/" -n "public-firing-range"
 nightvision target create -u "https://firing-range.saddlebagexchange.com/" -n "temp-saddlebag-fe"
 nightvision target create -u "https://staging.saddlebag-with-pockets.pages.dev/" -n "staging-fe-react"
+
+nightvision target create -u "http://localhost:8999" -n "webgoatnet"
+nightvision target create -u "http://127.0.0.1:8081/" -n "flaskSimpleExample" --type api  --swagger-file "openapi-spec-files/flaskSimpleExample.yml"
+nightvision target create -u "http://127.0.0.1:8020/" -n "vulndjangoplay-local" --type api  --swagger-file "openapi-spec-files/vulndjangoplay.yml"
 
 nightvision target create -u "https://javaspringvulny.nvtest.io:9000/" -n "javaspringvulny-public-api" --type api --swagger-file "openapi-spec-files/javaspringvulny-openapi-spec.yml"
 nightvision target create -u "https://localhost:9000" -n "javaspringvulny-api" --type api --swagger-file "openapi-spec-files/javaspringvulny-openapi-spec.yml"
