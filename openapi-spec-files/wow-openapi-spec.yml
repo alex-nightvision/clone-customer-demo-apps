@@ -1,0 +1,753 @@
+openapi: 3.0.0
+info:
+  title: WOW
+  version: 1.0.0
+servers:
+  - url: http://staging.saddlebagexchange.com
+paths:
+  /api/wow/bestdeals:
+    post:
+      tags:
+        - default
+      summary: best deals
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                type: all
+                region: NA
+                discount: 90
+                salesPerDay: 4.1
+                minPrice: 1000
+                item_class: -1
+                item_subclass: -1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/shoppinglistx:
+    post:
+      tags:
+        - default
+      summary: shopping list
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                region: NA
+                itemID: 152413
+                maxPurchasePrice: 1195000
+                connectedRealmIDs: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/exportx:
+    post:
+      tags:
+        - default
+      summary: export - server pop
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                region: NA
+                itemID: 844
+                populationWP: 3000
+                populationBlizz: 1
+                rankingWP: 90
+                minPrice: 3000
+                maxQuantity: 1000
+                sortBy: minPrice
+                connectedRealmIDs: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/regionundercut:
+    post:
+      tags:
+        - default
+      summary: wow-undercut region
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                region: NA
+                homeRealmID: 76
+                addonData:
+                  - homeRealmName: '119'
+                    region: US
+                    user_auctions:
+                      - itemID: 194020
+                        price: 38000000
+                        auctionID: 1466917308
+                      - itemID: 200470
+                        price: 150000000
+                        auctionID: 1466917691
+                  - homeRealmName: '1263'
+                    region: US
+                    user_auctions: []
+                  - homeRealmName: '1566'
+                    region: US
+                    user_auctions:
+                      - itemID: 206582
+                        price: 65000000
+                        auctionID: 1466978377
+                  - homeRealmName: '1293'
+                    region: US
+                    user_auctions:
+                      - itemID: 200470
+                        price: 39993100
+                        auctionID: 1466964208
+                      - itemID: 194018
+                        price: 47759700
+                        auctionID: 1466975290
+                      - itemID: 194020
+                        price: 49850200
+                        auctionID: 1466963394
+                  - homeRealmName: '1263'
+                    region: US
+                    user_auctions: []
+                  - homeRealmName: '1371'
+                    region: US
+                    user_auctions:
+                      - itemID: 194020
+                        price: 30000000
+                        auctionID: 1466923817
+                      - itemID: 194018
+                        price: 36505100
+                        auctionID: 1466925622
+                      - itemID: 200470
+                        price: 39995100
+                        auctionID: 1466924236
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/undercut:
+    post:
+      tags:
+        - default
+      summary: wow-undercut
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                homeRealmName: '119'
+                region: US
+                user_auctions:
+                  - itemID: 200470
+                    price: 33339400
+                    auctionID: 1368436224
+                  - itemID: 90655
+                    price: 215000000
+                    auctionID: 1217980413
+                  - itemID: 72145
+                    price: 750007300
+                    auctionID: 1217980413
+                  - itemID: 159840
+                    price: 999999800
+                    auctionID: 1217980413
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/uploadtimers:
+    post:
+      tags:
+        - default
+      summary: uploadtimers
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/itemstats:
+    post:
+      tags:
+        - default
+      summary: marketshare
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                homeRealmId: 3678
+                region: NA
+                commodity: true
+                desired_avg_price: 0
+                desired_sales_per_day: 10
+                itemQuality: 1
+                required_level: -1
+                item_class: -1
+                item_subclass: -1
+                ilvl: -1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/legacymarket:
+    post:
+      tags:
+        - default
+      summary: legacymarket
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                homeRealmId: 3678
+                desired_avg_price: 1000000
+                desired_sales_per_day: 4
+                item_class: -1
+                item_subclass: -1
+                sort_by: currentMarketValue
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/petmarketshare:
+    post:
+      tags:
+        - default
+      summary: pet marketshare
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                region: NA
+                homeRealmName: Sargeras
+                minPrice: 1000
+                salesPerDay: 1
+                includeCategories: []
+                excludeCategories: []
+                sortBy: estimatedRegionMarketValue
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/listings:
+    post:
+      tags:
+        - default
+      summary: listings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                homeRealmId: 3678
+                region: NA
+                itemID: 194671
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/itemnames:
+    post:
+      tags:
+        - default
+      summary: NAMES
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/itemdata:
+    post:
+      tags:
+        - default
+      summary: Item Data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                ilvl: 201
+                itemQuality: -1
+                required_level: -1
+                item_class:
+                  - 2
+                  - 4
+                item_subclass:
+                  - -1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/pricecheck:
+    post:
+      tags:
+        - default
+      summary: pricecheck
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                region: NA
+                homeRealmName: Thrall
+                user_auctions:
+                  - itemID: 194123
+                    price: 18000
+                    desired_state: below
+                  - itemID: 200036
+                    price: 2000000
+                    desired_state: above
+                  - itemID: 198715
+                    price: 3000000
+                    desired_state: above
+                  - itemID: 194018
+                    price: 9990000
+                    desired_state: above
+                  - itemID: 194057
+                    price: 9990000
+                    desired_state: above
+                  - itemID: 200469
+                    price: 22220000
+                    desired_state: above
+                  - itemID: 200031
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200032
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200033
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200037
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200038
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200039
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200040
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200022
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200023
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 200024
+                    price: 2790000
+                    desired_state: above
+                  - itemID: 194016
+                    price: 200000000
+                    desired_state: above
+                  - itemID: 194013
+                    price: 200000000
+                    desired_state: above
+                  - itemID: 193934
+                    price: 3000000
+                    desired_state: above
+                  - itemID: 194641
+                    price: 3999930100
+                    desired_state: below
+                  - itemID: 201320
+                    price: 170000
+                    desired_state: above
+                  - itemID: 201314
+                    price: 150000
+                    desired_state: above
+                  - itemID: 201311
+                    price: 150000
+                    desired_state: above
+                  - itemID: 200615
+                    price: 170000
+                    desired_state: above
+                  - itemID: 201317
+                    price: 150000
+                    desired_state: above
+                  - itemID: 201319
+                    price: 3330000
+                    desired_state: above
+                  - itemID: 200616
+                    price: 2000000
+                    desired_state: above
+                  - itemID: 201310
+                    price: 300000
+                    desired_state: above
+                  - itemID: 201316
+                    price: 3000000
+                    desired_state: above
+                  - itemID: 201313
+                    price: 3000000
+                    desired_state: above
+                  - itemID: 193943
+                    price: 4500000
+                    desired_state: above
+                  - itemID: 193946
+                    price: 12000000
+                    desired_state: above
+                  - itemID: 201405
+                    price: 990000
+                    desired_state: below
+                  - itemID: 193940
+                    price: 3000000
+                    desired_state: below
+                  - itemID: 200051
+                    price: 13000000
+                    desired_state: above
+                  - itemID: 200055
+                    price: 38000000
+                    desired_state: above
+                  - itemID: 200053
+                    price: 33000000
+                    desired_state: above
+                  - itemID: 200059
+                    price: 13000000
+                    desired_state: above
+                  - itemID: 200057
+                    price: 29000000
+                    desired_state: above
+                  - itemID: 200634
+                    price: 7770000
+                    desired_state: above
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/regionpricecheck:
+    post:
+      tags:
+        - default
+      summary: regionpricecheck
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                region: EU
+                user_auctions:
+                  - itemID: 147428
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 118874
+                    price: 1000000000
+                    desired_state: below
+                  - itemID: 124277
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 147429
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 31318
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 31331
+                    price: 750000000
+                    desired_state: below
+                  - itemID: 147423
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 159840
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 153018
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 165518
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 152413
+                    price: 750000000
+                    desired_state: below
+                  - itemID: 165765
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 147422
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 153019
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 146989
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 183616
+                    price: 10000000
+                    desired_state: below
+                  - itemID: 9385
+                    price: 5000000
+                    desired_state: below
+                  - itemID: 31336
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 2801
+                    price: 750000000
+                    desired_state: below
+                  - itemID: 94213
+                    price: 7500000
+                    desired_state: below
+                  - itemID: 1604
+                    price: 50000000
+                    desired_state: below
+                  - itemID: 187097
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 147425
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 124182
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 147064
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 166844
+                    price: 500000000
+                    desired_state: below
+                  - itemID: 164561
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 147424
+                    price: 200000000
+                    desired_state: below
+                  - itemID: 59467
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 152090
+                    price: 50000000
+                    desired_state: below
+                  - itemID: 161076
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 9429
+                    price: 1000000000
+                    desired_state: below
+                  - itemID: 9431
+                    price: 1000000000
+                    desired_state: below
+                  - itemID: 9425
+                    price: 1000000000
+                    desired_state: below
+                  - itemID: 23540
+                    price: 100000000
+                    desired_state: below
+                  - itemID: 164438
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 44703
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 190735
+                    price: 1500000000
+                    desired_state: below
+                  - itemID: 163928
+                    price: 750000000
+                    desired_state: below
+                  - itemID: 52252
+                    price: 500000000
+                    desired_state: below
+                  - itemID: 147038
+                    price: 150000000
+                    desired_state: below
+                  - itemID: 164431
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 13895
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 22282
+                    price: 250000000
+                    desired_state: below
+                  - itemID: 190626
+                    price: 750000000
+                    desired_state: below
+                  - itemID: 164433
+                    price: 250000000
+                    desired_state: below
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/quantitycheck:
+    post:
+      tags:
+        - default
+      summary: quantitycheck
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                region: NA
+                homeRealmName: Thrall
+                user_auctions:
+                  - itemID: 204975
+                    quantity: 1
+                    desired_state: above
+                  - itemID: 201310
+                    quantity: 100
+                    desired_state: below
+                  - itemID: 194018
+                    quantity: 100
+                    desired_state: below
+                  - itemID: 200616
+                    quantity: 100
+                    desired_state: below
+                  - itemID: 200634
+                    quantity: 100
+                    desired_state: below
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/scan:
+    post:
+      tags:
+        - default
+      summary: server to server trade
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                homeRealmId: 3676
+                newRealmId: 3678
+                min_historic_price: 1000
+                desired_roi: 1
+                sale_per_day: 0
+                itemQuality: -1
+                required_level: -1
+                item_class: -1
+                item_subclass: -1
+                ilvl: -1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/commodity:
+    post:
+      tags:
+        - default
+      summary: commodity
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                desired_avg_price: 50
+                desired_sales_per_day: 40
+                desired_price_increase: 50
+                desired_sell_price: 200
+                flip_risk_limit: 10
+                under_market_price_percent: 0
+                over_market_price_percent: 0
+                itemQuality: -1
+                item_class: -1
+                item_subclass: -1
+                region: EU
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/single:
+    post:
+      tags:
+        - default
+      summary: single
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                homeRealmId: 3678
+                desired_avg_price: 20
+                desired_sales_per_day: 2
+                desired_price_increase: 100
+                desired_sell_price: 40
+                flip_risk_limit: 100
+                under_market_price_percent: 0
+                over_market_price_percent: 50
+                itemQuality: 1
+                required_level: -1
+                item_class: -1
+                item_subclass: -1
+                ilvl: -1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/wow/commodityfutures:
+    post:
+      tags:
+        - default
+      summary: commodity futures
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                desired_avg_price: 200000
+                desired_sales_per_day: 200
+                itemQuality: 1
+                item_class: -1
+                item_subclass: -1
+                region: EU
+                homeRealmName: Thrall
+                desired_price_vs_avg_percent: 120
+                desired_quantity_vs_avg_percent: 50
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+

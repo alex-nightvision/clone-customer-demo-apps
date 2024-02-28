@@ -1,0 +1,511 @@
+openapi: 3.0.1
+info:
+  title: rest.testinvicti.com (JSON Web Token)
+  description: 'TODO: Add Description'
+  contact: {}
+  version: "1.0"
+servers:
+- url: http://rest.testinvicti.com/jwt
+tags:
+- name: User
+- name: Post
+- name: Comment
+- name: Misc
+  description: ""
+paths:
+  /api/users:
+    get:
+      tags:
+      - User
+      summary: Get all users
+      description: 'TODO: Add Description'
+      operationId: ApiUsersGet
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+    post:
+      tags:
+      - User
+      summary: Add new user
+      description: 'TODO: Add Description'
+      operationId: ApiUsersPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddnewuserRequest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/AddnewuserRequest'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+      x-codegen-request-body-name: Body
+  /api/users/{username}:
+    get:
+      tags:
+      - User
+      summary: Get user
+      description: 'TODO: Add Description'
+      operationId: ApiUsersTestUsernameGet
+      parameters:
+      - name: username
+        in: path
+        description: 'TODO: Add Description'
+        required: true
+        schema:
+          type: string
+          example: test_username
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+    put:
+      tags:
+      - User
+      summary: Edit user
+      description: 'TODO: Edit user'
+      operationId: ApiUsersTestUsernamePut
+      parameters:
+      - name: username
+        in: path
+        description: 'TODO: Edit user'
+        required: true
+        schema:
+          type: string
+          example: test_username
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EdituserRequest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/EdituserRequest'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+      x-codegen-request-body-name: Body
+    delete:
+      tags:
+      - User
+      summary: Delete user
+      description: 'TODO: Add Description'
+      operationId: ApiUsersTestUsernameDelete
+      parameters:
+      - name: username
+        in: path
+        description: 'TODO: Delete user'
+        required: true
+        schema:
+          type: string
+          example: test_username
+      - name: callback
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+  /api/users/{username}/posts:
+    get:
+      tags:
+      - User
+      summary: Get user posts
+      description: 'TODO: Add Description'
+      operationId: ApiUsersEna07PostsGet
+      parameters:
+      - name: username
+        in: path
+        description: 'TODO: Delete user'
+        required: true
+        schema:
+          type: string
+          example: ena07
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+  /api/posts:
+    get:
+      tags:
+      - Post
+      summary: Get all posts
+      description: 'TODO: Add Description'
+      operationId: ApiPostsGet
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+    post:
+      tags:
+      - Post
+      summary: Add new post
+      description: 'TODO: Add Description'
+      operationId: ApiPostsPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddnewpostRequest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/AddnewpostRequest'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+      x-codegen-request-body-name: Body
+  /api/posts/{postId}:
+    get:
+      tags:
+      - Post
+      summary: Get post
+      description: 'TODO: Get post'
+      operationId: ApiPosts21Get
+      parameters:
+      - name: postId
+        in: path
+        description: 'TODO: Get post'
+        required: true
+        schema:
+          type: integer
+          example: 21
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+  /api/posts/{commentId}/comments:
+    get:
+      tags:
+      - Post
+      summary: Get post comments
+      description: 'TODO: Add Description'
+      operationId: ApiPosts5CommentsGet
+      parameters:
+      - name: commentId
+        in: path
+        description: 'TODO: Get post comments'
+        required: true
+        schema:
+          type: integer
+          example: 5
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+    put:
+      tags:
+      - Post
+      summary: Edit post
+      description: 'TODO: Add Description'
+      operationId: ApiPosts5Put
+      parameters:
+      - name: commentId
+        in: path
+        description: 'TODO: Get post comments'
+        required: true
+        schema:
+          type: integer
+          example: 5
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditpostRequest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/EditpostRequest'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+      x-codegen-request-body-name: Body
+    delete:
+      tags:
+      - Post
+      summary: Delete post
+      description: 'TODO: Add Description'
+      operationId: ApiPosts1Delete
+      parameters:
+      - name: commentId
+        in: path
+        description: 'TODO: Get post comments'
+        required: true
+        schema:
+          type: integer
+          example: 1
+      - name: callback
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+  /api/comments:
+    get:
+      tags:
+      - Comment
+      summary: Get all comments
+      description: 'TODO: Add Description'
+      operationId: ApiCommentsGet
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+    post:
+      tags:
+      - Comment
+      summary: Add new comment
+      description: 'TODO: Add Description'
+      operationId: ApiCommentsPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddnewcommentRequest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/AddnewcommentRequest'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+      x-codegen-request-body-name: Body
+  /api/comments/{commentId}:
+    get:
+      tags:
+      - Comment
+      summary: Get comment
+      description: 'TODO: Add Description'
+      operationId: ApiComments21Get
+      parameters:
+      - name: commentId
+        in: path
+        description: 'TODO: Get comment'
+        required: true
+        schema:
+          type: integer
+          example: 21
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+    put:
+      tags:
+      - Comment
+      summary: Edit comment
+      description: 'TODO: Add Description'
+      operationId: ApiComments101Put
+      parameters:
+      - name: commentId
+        in: path
+        description: 'TODO: Get comment'
+        required: true
+        schema:
+          type: integer
+          example: 21
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditcommentRequest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/EditcommentRequest'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+      x-codegen-request-body-name: Body
+    delete:
+      tags:
+      - Comment
+      summary: Delete comment
+      description: 'TODO: Add Description'
+      operationId: ApiComments101Delete
+      parameters:
+      - name: commentId
+        in: path
+        description: 'TODO: Get comment'
+        required: true
+        schema:
+          type: integer
+          example: 21
+      - name: callback
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+  /api:
+    get:
+      tags:
+      - Misc
+      summary: Test root path
+      description: 'TODO: Add Description'
+      operationId: ApiGet
+      responses:
+        200:
+          description: ""
+          content: {}
+      deprecated: false
+components:
+  schemas:
+    AddnewuserRequest:
+      title: AddnewuserRequest
+      required:
+      - email
+      - first_name
+      - last_name
+      - password
+      - username
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+      example:
+        username: test_username
+        email: test_user@example.com
+        password: 123456
+        first_name: test
+        last_name: user
+    EdituserRequest:
+      title: EdituserRequest
+      required:
+      - email
+      - first_name
+      - last_name
+      - password
+      - username
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+      example:
+        username: test_username22
+        email: test_user@example22.com
+        password: 123456
+        first_name: test22
+        last_name: user22
+    AddnewpostRequest:
+      title: AddnewpostRequest
+      required:
+      - content
+      - title
+      - user_id
+      type: object
+      properties:
+        user_id:
+          type: string
+        title:
+          type: string
+        content:
+          type: string
+      example:
+        user_id: 21
+        title: test post title
+        content: test content
+    EditpostRequest:
+      title: EditpostRequest
+      required:
+      - content
+      - title
+      - user_id
+      type: object
+      properties:
+        user_id:
+          type: string
+        title:
+          type: string
+        content:
+          type: string
+      example:
+        user_id: 34
+        title: test post title22
+        content: test content22
+    AddnewcommentRequest:
+      title: AddnewcommentRequest
+      required:
+      - comment
+      - post_id
+      - user_id
+      type: object
+      properties:
+        user_id:
+          type: string
+        post_id:
+          type: string
+        comment:
+          type: string
+      example:
+        user_id: 21
+        post_id: 5
+        comment: test comment
+    EditcommentRequest:
+      title: EditcommentRequest
+      required:
+      - comment
+      - post_id
+      - user_id
+      type: object
+      properties:
+        user_id:
+          type: string
+        post_id:
+          type: string
+        comment:
+          type: string
+      example:
+        user_id: 21
+        post_id: 34
+        comment: test comment11
