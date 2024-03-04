@@ -10,11 +10,11 @@ fi
 # apps
 apps="vulndjangoplay
 xssfastapi
-testsparker-api
 testinvicti-api
 demo-testfire
 testasp
 testphp
+testsparker
 public-firing-range
 javaspringvulny-api
 saddlebag-exchange
@@ -31,6 +31,8 @@ nightvision target create -u "http://xssfastapi.nvtest.io:8000/" -n "xssfastapi"
 nightvision target create -u "http://demo.testfire.net/" -n "demo-testfire"
 nightvision target create -u "http://testasp.vulnweb.com/" -n "testasp"
 nightvision target create -u "http://testphp.vulnweb.com/" -n "testphp"
+nightvision target create -u "http://php.testsparker.com/" -n "testsparker-php"
+nightvision target create -u "http://aspnet.testsparker.com/" -n "testsparker-aspnet"
 nightvision target create -u "https://public-firing-range.appspot.com/" -n "public-firing-range"
 nightvision target create -u "https://firing-range.saddlebagexchange.com/" -n "temp-saddlebag-fe"
 nightvision target create -u "https://staging.saddlebag-with-pockets.pages.dev/" -n "staging-fe-react"
@@ -53,11 +55,15 @@ nightvision auth headers create \
 
 # http://aspnet.testsparker.com
 echo "PLEASE LOG IN WITH THESE CREDENTIALS -" && echo "alan@turing.com" && echo "theturingtest"
-nightvision auth playwright create -u "http://aspnet.testsparker.com/" -n "testsparker-api"
+nightvision auth playwright create -u "http://aspnet.testsparker.com/" -n "testsparker-asp"
 
 # http://php.testsparker.com
 echo "PLEASE LOG IN WITH THESE CREDENTIALS - " && echo "admin" && echo "admin123456"
-nightvision auth playwright create -u "http://php.testsparker.com/" -n "testphp"
+nightvision auth playwright create -u "http://php.testsparker.com/" -n "testsparker-php"
+
+# http://testphp.vulnweb.com/
+echo "PLEASE LOG IN WITH THESE CREDENTIALS - " && echo "test" && echo "test"
+nightvision auth playwright create -u "http://testphp.vulnweb.com/" -n "testphp"
 
 # http://demo.testfire.net
 echo "PLEASE LOG IN WITH THESE CREDENTIALS -  " && echo "admin" && echo "admin"
