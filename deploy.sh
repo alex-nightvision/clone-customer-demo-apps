@@ -42,7 +42,7 @@ nightvision target create -u "http://127.0.0.1:8081/" -n "flaskSimpleExample" --
 nightvision target create -u "http://127.0.0.1:8020/" -n "vulndjangoplay-local" --type api  --swagger-file "openapi-spec-files/vulndjangoplay.yml"
 
 nightvision target create -u "https://javaspringvulny.nvtest.io:9000/" -n "javaspringvulny-public-api" --type api --swagger-file "openapi-spec-files/javaspringvulny-openapi-spec.yml"
-nightvision target create -u "https://localhost:9000" -n "javaspringvulny-api" --type api --swagger-file "openapi-spec-files/javaspringvulny-openapi-spec.yml"
+nightvision target create -u "https://localhost:9000" -n "javaspringvulny-api" --type api --swagger-file "openapi-spec-files/javaspringvulny-openapi-spec-local.yml"
 nightvision target create -u "https://staging.saddlebagexchange.com/" -n "staging-wow" --type api --swagger-file "openapi-spec-files/wow-openapi-spec.yml"
 nightvision target create -u "https://staging.saddlebagexchange.com/" -n "staging-ffxiv" --type api --swagger-file "openapi-spec-files/ffxiv-openapi-spec.yml"
 nightvision target create -u "https://firing-range.saddlebagexchange.com/" -n "temp-saddlebag-fe-api" --type api --swagger-file "openapi-spec-files/temp-fe-openapi-spec.yml"
