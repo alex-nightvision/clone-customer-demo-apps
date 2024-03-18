@@ -1,0 +1,1123 @@
+components:
+  schemas:
+    ChangeEmailForm:
+      description: Class ChangeEmailForm
+      properties:
+        new_email:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        old_email:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        token:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: ChangeEmailForm
+      x-source-file: services/identity/src/main/java/com/crapi/model/ChangeEmailForm.java~~22
+    ForgetPassword:
+      description: Class ForgetPassword
+      properties:
+        email:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: ForgetPassword
+      x-source-file: services/identity/src/main/java/com/crapi/model/ForgetPassword.java~~24
+    JwtTokenForm:
+      description: Class JwtTokenForm
+      properties:
+        token:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: JwtTokenForm
+      x-source-file: services/identity/src/main/java/com/crapi/model/JwtTokenForm.java~~21
+    LoginForm:
+      description: Class LoginForm
+      properties:
+        email:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        number:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        password:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: LoginForm
+      x-source-file: services/identity/src/main/java/com/crapi/model/LoginForm.java~~22
+    LoginWithEmailToken:
+      description: Class LoginWithEmailToken
+      properties:
+        email:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        token:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: LoginWithEmailToken
+      x-source-file: services/identity/src/main/java/com/crapi/model/LoginWithEmailToken.java~~22
+    Multipartfile:
+      description: Class Multipartfile
+      properties:
+        file:
+          description: Spring MultipartFile
+          format: binary
+          type: string
+          x-field-kind: normal
+          x-field-original-type: MultipartFile
+          x-field-type: Multipart
+      type: object
+      x-class-type: Multipartfile
+      x-source-file: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~60
+    OtpForm:
+      description: Class OtpForm
+      properties:
+        email:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        otp:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        password:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: OtpForm
+      x-source-file: services/identity/src/main/java/com/crapi/model/OtpForm.java~~22
+    SignUpForm:
+      description: Class SignUpForm
+      properties:
+        email:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        id:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        name:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        number:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        password:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: SignUpForm
+      x-source-file: services/identity/src/main/java/com/crapi/model/SignUpForm.java~~23
+    VehicleForm:
+      description: Class VehicleForm
+      properties:
+        pincode:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        vin:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: VehicleForm
+      x-source-file: services/identity/src/main/java/com/crapi/model/VehicleForm.java~~22
+    VideoForm:
+      description: Class VideoForm
+      properties:
+        conversion_params:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        id:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: long
+          x-field-type: long
+        video_url:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+        videoName:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: String
+          x-field-type: String
+      type: object
+      x-class-type: VideoForm
+      x-source-file: services/identity/src/main/java/com/crapi/model/VideoForm.java~~20
+    services.workshop.crapi.shop.serializers.Product_Request:
+      description: Class services.workshop.crapi.shop.serializers.Product_Request
+      properties:
+        id:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        image_url:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        name:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        price:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+      type: object
+      x-class-type: services.workshop.crapi.shop.serializers.Product_Request
+      x-source-file: ""
+info:
+  title: crapi
+  version: "0.1"
+openapi: 3.0.0
+paths:
+  /identity/api/auth/forget-password:
+    post:
+      operationId: identity_api_auth_forget-password-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForgetPassword'
+        required: true
+        x-code: '@Valid @RequestBody ForgetPassword forgetPassword'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_forget-password-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~116
+    x-name: identity_api_auth_forget-password
+  /identity/api/auth/jwks.json:
+    get:
+      operationId: identity_api_auth_jwks.json-GET
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_jwks.json-GET
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~106
+    head:
+      operationId: identity_api_auth_jwks.json-HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_jwks.json-HEAD
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~106
+    x-name: identity_api_auth_jwks.json
+  /identity/api/auth/login:
+    post:
+      operationId: identity_api_auth_login-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginForm'
+        required: true
+        x-code: '@Valid @RequestBody LoginForm loginForm'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_login-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~53
+    x-name: identity_api_auth_login
+  /identity/api/auth/reset-test-users:
+    post:
+      operationId: identity_api_auth_reset-test-users-POST
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_reset-test-users-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~185
+    x-name: identity_api_auth_reset-test-users
+  /identity/api/auth/signup:
+    post:
+      operationId: identity_api_auth_signup-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignUpForm'
+        required: true
+        x-code: '@Valid @RequestBody SignUpForm signUpRequest'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_signup-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~76
+    x-name: identity_api_auth_signup
+  /identity/api/auth/v2.7/user/login-with-token:
+    post:
+      operationId: identity_api_auth_v2.7_user_login-with-token-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginWithEmailToken'
+        required: true
+        x-code: '@Valid @RequestBody LoginWithEmailToken loginWithEmailToken'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_v2.7_user_login-with-token-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~174
+    x-name: identity_api_auth_v2.7_user_login-with-token
+  /identity/api/auth/v2/check-otp:
+    post:
+      operationId: identity_api_auth_v2_check-otp-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtpForm'
+        required: true
+        x-code: '@RequestBody OtpForm otpForm'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_v2_check-otp-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~131
+    x-name: identity_api_auth_v2_check-otp
+  /identity/api/auth/v3/check-otp:
+    post:
+      operationId: identity_api_auth_v3_check-otp-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OtpForm'
+        required: true
+        x-code: '@RequestBody OtpForm otpForm'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_v3_check-otp-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~146
+    x-name: identity_api_auth_v3_check-otp
+  /identity/api/auth/v4.0/user/login-with-token:
+    post:
+      operationId: identity_api_auth_v4.0_user_login-with-token-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginWithEmailToken'
+        required: true
+        x-code: '@RequestBody LoginWithEmailToken loginWithEmailToken'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_v4.0_user_login-with-token-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~162
+    x-name: identity_api_auth_v4.0_user_login-with-token
+  /identity/api/auth/verify:
+    post:
+      operationId: identity_api_auth_verify-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JwtTokenForm'
+        required: true
+        x-code: '@Valid @RequestBody JwtTokenForm verifyTokenRequest'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_auth_verify-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/AuthController.java~~93
+    x-name: identity_api_auth_verify
+  /identity/api/v2/admin/videos/{video_id}:
+    delete:
+      operationId: identity_api_v2_admin_videos_{video_id}-DELETE
+      parameters:
+      - in: path
+        name: video_id
+        required: true
+        schema:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        x-category: path parameter
+        x-code: '@PathVariable("video_id") Long videoId'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_admin_videos_{video_id}-DELETE
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~129
+    x-name: identity_api_v2_admin_videos_{video_id}
+  /identity/api/v2/user/change-email:
+    post:
+      operationId: identity_api_v2_user_change-email-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangeEmailForm'
+        required: true
+        x-code: '@Valid @RequestBody ChangeEmailForm changeEmailForm'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_change-email-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/ChangeEmailController.java~~41
+    x-name: identity_api_v2_user_change-email
+  /identity/api/v2/user/dashboard:
+    get:
+      operationId: identity_api_v2_user_dashboard-GET
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_dashboard-GET
+      x-source: services/identity/src/main/java/com/crapi/controller/UserController.java~~43
+    head:
+      operationId: identity_api_v2_user_dashboard-HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_dashboard-HEAD
+      x-source: services/identity/src/main/java/com/crapi/controller/UserController.java~~43
+    x-name: identity_api_v2_user_dashboard
+  /identity/api/v2/user/pictures:
+    post:
+      operationId: identity_api_v2_user_pictures-POST
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Multipartfile'
+        required: true
+        x-code: '@RequestPart("file") MultipartFile file'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_pictures-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~60
+    x-name: identity_api_v2_user_pictures
+  /identity/api/v2/user/reset-password:
+    post:
+      operationId: identity_api_v2_user_reset-password-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginForm'
+        required: true
+        x-code: '@RequestBody LoginForm loginForm'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_reset-password-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/UserController.java~~58
+    x-name: identity_api_v2_user_reset-password
+  /identity/api/v2/user/verify-email-token:
+    post:
+      operationId: identity_api_v2_user_verify-email-token-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangeEmailForm'
+        required: true
+        x-code: '@RequestBody ChangeEmailForm changeEmailForm'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_verify-email-token-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/ChangeEmailController.java~~59
+    x-name: identity_api_v2_user_verify-email-token
+  /identity/api/v2/user/videos:
+    post:
+      operationId: identity_api_v2_user_videos-POST
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Multipartfile'
+        required: true
+        x-code: '@RequestPart("file") MultipartFile file'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_videos-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~78
+    x-name: identity_api_v2_user_videos
+  /identity/api/v2/user/videos/{video_id}:
+    delete:
+      operationId: identity_api_v2_user_videos_{video_id}-DELETE
+      parameters:
+      - in: path
+        name: video_id
+        required: true
+        schema:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        x-category: path parameter
+        x-code: '@PathVariable("video_id") Long videoId'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_videos_{video_id}-DELETE
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~113
+    get:
+      operationId: identity_api_v2_user_videos_{video_id}-GET
+      parameters:
+      - in: path
+        name: video_id
+        required: true
+        schema:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        x-category: path parameter
+        x-code: '@PathVariable("video_id") Long videoId'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_videos_{video_id}-GET
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~42
+    head:
+      operationId: identity_api_v2_user_videos_{video_id}-HEAD
+      parameters:
+      - in: path
+        name: video_id
+        required: true
+        schema:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        x-category: path parameter
+        x-code: '@PathVariable("video_id") Long videoId'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_videos_{video_id}-HEAD
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~42
+    put:
+      operationId: identity_api_v2_user_videos_{video_id}-PUT
+      parameters:
+      - in: path
+        name: video_id
+        required: true
+        schema:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        x-category: path parameter
+        x-code: '@PathVariable("video_id") Long videoId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VideoForm'
+        required: true
+        x-code: '@RequestBody VideoForm videoForm'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_videos_{video_id}-PUT
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~95
+    x-name: identity_api_v2_user_videos_{video_id}
+  /identity/api/v2/user/videos/convert_video:
+    get:
+      operationId: identity_api_v2_user_videos_convert_video-GET
+      parameters:
+      - in: query
+        name: video_id
+        schema:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        x-category: query parameter
+        x-code: '@RequestParam(required = false) Long video_id'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_videos_convert_video-GET
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~145
+    head:
+      operationId: identity_api_v2_user_videos_convert_video-HEAD
+      parameters:
+      - in: query
+        name: video_id
+        schema:
+          format: int64
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: Long
+          x-field-type: Long
+        x-category: query parameter
+        x-code: '@RequestParam(required = false) Long video_id'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_user_videos_convert_video-HEAD
+      x-source: services/identity/src/main/java/com/crapi/controller/ProfileController.java~~145
+    x-name: identity_api_v2_user_videos_convert_video
+  /identity/api/v2/vehicle/{carId}/location:
+    get:
+      operationId: identity_api_v2_vehicle_{carId}_location-GET
+      parameters:
+      - in: path
+        name: carId
+        required: true
+        schema:
+          format: uuid
+          type: string
+          x-field-kind: normal
+          x-field-original-type: UUID
+          x-field-type: UUID
+        x-category: path parameter
+        x-code: '@PathVariable("carId") UUID carId'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_vehicle_{carId}_location-GET
+      x-source: services/identity/src/main/java/com/crapi/controller/VehicleController.java~~108
+    head:
+      operationId: identity_api_v2_vehicle_{carId}_location-HEAD
+      parameters:
+      - in: path
+        name: carId
+        required: true
+        schema:
+          format: uuid
+          type: string
+          x-field-kind: normal
+          x-field-original-type: UUID
+          x-field-type: UUID
+        x-category: path parameter
+        x-code: '@PathVariable("carId") UUID carId'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_vehicle_{carId}_location-HEAD
+      x-source: services/identity/src/main/java/com/crapi/controller/VehicleController.java~~108
+    x-name: identity_api_v2_vehicle_{carId}_location
+  /identity/api/v2/vehicle/add_vehicle:
+    post:
+      operationId: identity_api_v2_vehicle_add_vehicle-POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleForm'
+        required: true
+        x-code: '@Valid @RequestBody VehicleForm vehicleDetails'
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_vehicle_add_vehicle-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/VehicleController.java~~47
+    x-name: identity_api_v2_vehicle_add_vehicle
+  /identity/api/v2/vehicle/resend_email:
+    post:
+      operationId: identity_api_v2_vehicle_resend_email-POST
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_vehicle_resend_email-POST
+      x-source: services/identity/src/main/java/com/crapi/controller/VehicleController.java~~61
+    x-name: identity_api_v2_vehicle_resend_email
+  /identity/api/v2/vehicle/vehicles:
+    get:
+      operationId: identity_api_v2_vehicle_vehicles-GET
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_vehicle_vehicles-GET
+      x-source: services/identity/src/main/java/com/crapi/controller/VehicleController.java~~75
+    head:
+      operationId: identity_api_v2_vehicle_vehicles-HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: identity_api_v2_vehicle_vehicles-HEAD
+      x-source: services/identity/src/main/java/com/crapi/controller/VehicleController.java~~75
+    x-name: identity_api_v2_vehicle_vehicles
+  /identity/health_check:
+    get:
+      operationId: identity_health_check-GET
+      responses:
+        default:
+          description: Default response
+      x-name: identity_health_check-GET
+      x-source: services/identity/src/main/java/com/crapi/controller/HealthCheckController.java~~28
+    head:
+      operationId: identity_health_check-HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: identity_health_check-HEAD
+      x-source: services/identity/src/main/java/com/crapi/controller/HealthCheckController.java~~28
+    x-name: identity_health_check
+  /workshop/admin/:
+    get:
+      operationId: workshop_admin_GET
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_admin_GET
+      x-source: services/workshop/crapi_site/urls.py~~35
+    x-name: workshop_admin
+  /workshop/api/management/users/all:
+    get:
+      operationId: workshop_api_management_users_all_GET
+      parameters:
+      - in: query
+        name: limit
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: offset
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_management_users_all_GET
+      x-source: services/workshop/crapi/user/views.py~~39
+    x-name: workshop_api_management_users_all
+  /workshop/api/mechanic/:
+    get:
+      operationId: workshop_api_mechanic_GET
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_mechanic_GET
+      x-source: services/workshop/crapi/mechanic/views.py~~98
+    x-name: workshop_api_mechanic
+  /workshop/api/mechanic/mechanic_report:
+    get:
+      operationId: workshop_api_mechanic_mechanic_report_GET
+      parameters:
+      - in: query
+        name: report_id
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_mechanic_mechanic_report_GET
+      x-source: services/workshop/crapi/mechanic/views.py~~159
+    x-name: workshop_api_mechanic_mechanic_report
+  /workshop/api/mechanic/receive_report:
+    get:
+      operationId: workshop_api_mechanic_receive_report_GET
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_mechanic_receive_report_GET
+      x-source: services/workshop/crapi/mechanic/views.py~~121
+    x-name: workshop_api_mechanic_receive_report
+  /workshop/api/mechanic/service_requests:
+    get:
+      operationId: workshop_api_mechanic_service_requests_GET
+      parameters:
+      - in: query
+        name: limit
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: offset
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_mechanic_service_requests_GET
+      x-source: services/workshop/crapi/mechanic/views.py~~196
+    x-name: workshop_api_mechanic_service_requests
+  /workshop/api/mechanic/signup:
+    post:
+      operationId: workshop_api_mechanic_signup_POST
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_mechanic_signup_POST
+      x-source: services/workshop/crapi/mechanic/views.py~~39
+    x-name: workshop_api_mechanic_signup
+  /workshop/api/merchant/contact_mechanic:
+    post:
+      operationId: workshop_api_merchant_contact_mechanic_POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                mechanic_api:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                number_of_repeats:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                repeat_request_if_failed:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_merchant_contact_mechanic_POST
+      x-source: services/workshop/crapi/merchant/views.py~~37
+    x-name: workshop_api_merchant_contact_mechanic
+  /workshop/api/shop/apply_coupon:
+    post:
+      operationId: workshop_api_shop_apply_coupon_POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                amount:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                coupon_code:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_apply_coupon_POST
+      x-source: services/workshop/crapi/shop/views.py~~328
+    x-name: workshop_api_shop_apply_coupon
+  /workshop/api/shop/orders:
+    get:
+      operationId: workshop_api_shop_orders_GET
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_GET
+      x-source: services/workshop/crapi/shop/views.py~~91
+    post:
+      operationId: workshop_api_shop_orders_POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                product_id:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                quantity:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_POST
+      x-source: services/workshop/crapi/shop/views.py~~144
+    put:
+      operationId: workshop_api_shop_orders_PUT
+      parameters:
+      - in: query
+        name: quantity
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: status
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_PUT
+      x-source: services/workshop/crapi/shop/views.py~~187
+    x-name: workshop_api_shop_orders
+  /workshop/api/shop/orders/{order_id}:
+    get:
+      operationId: workshop_api_shop_orders_{order_id}_GET
+      parameters:
+      - in: path
+        name: order_id
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_{order_id}_GET
+      x-source: services/workshop/crapi/shop/views.py~~91
+    post:
+      operationId: workshop_api_shop_orders_{order_id}_POST
+      parameters:
+      - in: path
+        name: order_id
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                product_id:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+                quantity:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_{order_id}_POST
+      x-source: services/workshop/crapi/shop/views.py~~144
+    put:
+      operationId: workshop_api_shop_orders_{order_id}_PUT
+      parameters:
+      - in: path
+        name: order_id
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: query
+        name: quantity
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: status
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_{order_id}_PUT
+      x-source: services/workshop/crapi/shop/views.py~~187
+    x-name: workshop_api_shop_orders_{order_id}
+  /workshop/api/shop/orders/all:
+    get:
+      operationId: workshop_api_shop_orders_all_GET
+      parameters:
+      - in: query
+        name: limit
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      - in: query
+        name: offset
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: query parameter
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_all_GET
+      x-source: services/workshop/crapi/shop/views.py~~233
+    x-name: workshop_api_shop_orders_all
+  /workshop/api/shop/orders/return_order:
+    post:
+      operationId: workshop_api_shop_orders_return_order_POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                order_id:
+                  type: string
+                  x-field-kind: normal
+                  x-field-original-type: builtin.str
+                  x-field-type: string
+              type: object
+              x-field-kind: normal
+              x-field-original-type: object
+              x-field-type: object
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_orders_return_order_POST
+      x-source: services/workshop/crapi/shop/views.py~~272
+    x-name: workshop_api_shop_orders_return_order
+  /workshop/api/shop/products:
+    get:
+      operationId: workshop_api_shop_products_GET
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_products_GET
+      x-source: services/workshop/crapi/shop/views.py~~45
+    post:
+      operationId: workshop_api_shop_products_POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/services.workshop.crapi.shop.serializers.Product_Request'
+        x-code: ""
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_products_POST
+      x-source: services/workshop/crapi/shop/views.py~~66
+    x-name: workshop_api_shop_products
+  /workshop/api/shop/return_qr_code:
+    get:
+      operationId: workshop_api_shop_return_qr_code_GET
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_api_shop_return_qr_code_GET
+      x-source: services/workshop/crapi/shop/views.py~~312
+    x-name: workshop_api_shop_return_qr_code
+  /workshop/health_check/:
+    get:
+      operationId: workshop_health_check_GET
+      responses:
+        default:
+          description: Default response
+      x-name: workshop_health_check_GET
+      x-source: services/workshop/crapi_site/urls.py~~36
+    x-name: workshop_health_check
+servers:
+- description: Default server
+  url: http://crapi.nvtest.io/

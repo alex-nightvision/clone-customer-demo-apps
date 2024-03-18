@@ -19,7 +19,8 @@ public-firing-range
 javaspringvulny-api
 saddlebag-exchange
 webgoatnet
-flaskSimpleExample"
+flaskSimpleExample
+crapi"
 
 for app in $apps; do
 	nightvision app create --name $app
@@ -47,6 +48,7 @@ nightvision target create -u "https://staging.saddlebagexchange.com/" -n "stagin
 nightvision target create -u "https://staging.saddlebagexchange.com/" -n "staging-ffxiv" --type api --swagger-file "openapi-spec-files/ffxiv-openapi-spec.yml"
 nightvision target create -u "https://firing-range.saddlebagexchange.com/" -n "temp-saddlebag-fe-api" --type api --swagger-file "openapi-spec-files/temp-fe-openapi-spec.yml"
 nightvision target create -u "http://rest.testinvicti.com/jwt" -n "testinvicti-api" --type api --swagger-file "openapi-spec-files/testinvicti-api-jwt.yml"
+nightvision target create -u "http://crapi.nvtest.io" -n "crapi" --type api --swagger-file "openapi-spec-files/crapi-openapi-spec-local.yml"
 
 # auth
 nightvision auth headers create \
@@ -60,6 +62,10 @@ nightvision auth playwright create -u "http://aspnet.testsparker.com/" -n "tests
 # http://php.testsparker.com
 echo "PLEASE LOG IN WITH THESE CREDENTIALS - " && echo "admin" && echo "admin123456"
 nightvision auth playwright create -u "http://php.testsparker.com/" -n "testsparker-php"
+
+# http://crapi.nvtest.io
+echo "PLEASE LOG IN WITH THESE CREDENTIALS - " && echo "admin@mail.com" && echo "Admin123!"
+nightvision auth playwright create -u "http://crapi.nvtest.io" -n "crapi"
 
 # http://testphp.vulnweb.com/
 echo "PLEASE LOG IN WITH THESE CREDENTIALS - " && echo "test" && echo "test"
