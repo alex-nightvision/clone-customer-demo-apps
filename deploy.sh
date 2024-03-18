@@ -48,7 +48,7 @@ nightvision target create -u "https://staging.saddlebagexchange.com/" -n "stagin
 nightvision target create -u "https://staging.saddlebagexchange.com/" -n "staging-ffxiv" --type api --swagger-file "openapi-spec-files/ffxiv-openapi-spec.yml"
 nightvision target create -u "https://firing-range.saddlebagexchange.com/" -n "temp-saddlebag-fe-api" --type api --swagger-file "openapi-spec-files/temp-fe-openapi-spec.yml"
 nightvision target create -u "http://rest.testinvicti.com/jwt" -n "testinvicti-api" --type api --swagger-file "openapi-spec-files/testinvicti-api-jwt.yml"
-nightvision target create -u "http://crapi.nvtest.io" -n "crapi" --type api --swagger-file "openapi-spec-files/crapi-openapi-spec-local.yml"
+nightvision target create -u "http://crapi.nvtest.io" -n "crapi" --type api --swagger-file "openapi-spec-files/crapi-openapi-spec.yml"
 
 # auth
 nightvision auth headers create \
