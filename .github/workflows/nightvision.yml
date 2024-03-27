@@ -1,7 +1,7 @@
 name: Create Daily Demo Project
 
 on:
-  push:
+  # push:
   workflow_dispatch:
   schedule:
     - cron:  '1 1 * * *'
