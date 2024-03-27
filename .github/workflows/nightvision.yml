@@ -22,10 +22,10 @@ jobs:
             wget -c https://downloads.nightvision.net/binaries/latest/nightvision_latest_linux_amd64.tar.gz -O - | tar -xz; sudo mv nightvision /usr/local/bin/
                     python -m pip install semgrep --user
 
-      - name: (3) Create Project
+      - name: (3) Create Project and run scan
         run: |
-          sh simple-deploy.sh "demo-$(date +"%s")"
-
-      - name: (4) Create everything and Scan the API
-        run: |
-          sh simple-deploy.sh "demo-$(date +"%s")"
+          project_name="demo-$(date +"%s")"
+          # first one makes the project
+          sh simple-deploy.sh $project_name
+          # 2nd runs everything
+          sh simple-deploy.sh $project_name
