@@ -5,6 +5,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron:  '1 1 * * *'
+env:
+  NIGHTVISION_TOKEN: ${{ secrets.NIGHTVISION_TOKEN }}
 
 jobs:
   test:
