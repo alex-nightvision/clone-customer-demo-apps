@@ -23,7 +23,7 @@ jobs:
                     python -m pip install semgrep --user
       - name: (3) Create Project and run scan
         run: |
-            nightvision scan -t testphp -a testphp &
+            nightvision scan testphp -a testphp &
 
       # - name: (3) Create Project and run scan
       #   run: |
