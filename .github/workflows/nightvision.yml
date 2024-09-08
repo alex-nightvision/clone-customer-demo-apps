@@ -24,7 +24,7 @@ jobs:
       - name: (3) Create Project and run scan
         run: |
             for i in $(seq 1 9); do
-            	nightvision scan -t testphp -a testphp &
+            	nightvision scan testphp -a testphp &
             done
 
       # - name: (3) Create Project and run scan
